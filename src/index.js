@@ -103,7 +103,6 @@ const RenderInput = ({
   };
 
   const validation = { ...getValidation(), ...required };
-  console.log(validation);
 
   const symbol = getSymbolFromCurrency(format);
 
