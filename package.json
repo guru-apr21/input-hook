@@ -1,6 +1,6 @@
 {
   "name": "input-hook",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Reusable react hook form input component.",
   "main": "./build/index.js",
   "scripts": {
