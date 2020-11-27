@@ -62,7 +62,7 @@ const RenderInput = ({
   error,
   format,
   register,
-  required,
+  condition,
   style,
   type = 'text',
   ...props
@@ -103,7 +103,7 @@ const RenderInput = ({
     }
   };
 
-  const validation = { ...getValidation(), ...required };
+  const validation = { ...getValidation(), ...condition };
 
   const symbol = getSymbolFromCurrency(format);
 
