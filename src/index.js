@@ -64,6 +64,7 @@ const RenderInput = ({
   format,
   register,
   required,
+  style,
   type = 'text',
 }) => {
   const getValidation = () => {
@@ -111,6 +112,7 @@ const RenderInput = ({
       <Label>{label}</Label>
       <Wrapper>
         <Input
+          $style={style}
           name={name}
           $type={type}
           type={getType()}
