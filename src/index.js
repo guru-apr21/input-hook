@@ -57,7 +57,6 @@ const IconRight = styled(Icon)`
 `;
 
 const RenderInput = ({
-  placeholder,
   label,
   name,
   error,
@@ -66,6 +65,7 @@ const RenderInput = ({
   required,
   style,
   type = 'text',
+  ...props
 }) => {
   const getValidation = () => {
     switch (type) {
@@ -112,12 +112,12 @@ const RenderInput = ({
       <Label>{label}</Label>
       <Wrapper>
         <Input
-          $style={style}
           name={name}
-          $type={type}
           type={getType()}
+          $style={style}
+          $type={type}
           ref={register(validation)}
-          placeholder={placeholder}
+          {...props}
         ></Input>
         {type === 'currency' && <Icon>{symbol}</Icon>}
         {type === 'percentage' && <IconRight>%</IconRight>}
